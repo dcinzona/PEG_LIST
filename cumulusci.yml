@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '4.1.0'
+project:
+    name: custom-related-list
+    package:
+        name: custom-related-list
+        api_version: '62.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/custom-related-list/tests
+            options:
+                outputdir: robot/custom-related-list/results
+
+    robot_testdoc:
+        options:
+            path: robot/custom-related-list/tests
+            output: robot/custom-related-list/doc/custom-related-list_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
